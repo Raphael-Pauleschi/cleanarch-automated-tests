@@ -1,11 +1,11 @@
 import { NegocioErro } from "./error/NegocioErro";
-
+import { NumeroConta } from "./NumeroConta";
 export class Conta {
-    private _numero: string;
+    private _numeroConta: NumeroConta;
     private _saldo: number;
 
     public constructor(numero: string, saldo: number){
-        this._numero = numero;
+        this._numeroConta = new NumeroConta(numero);
         this._saldo = saldo;
     }
 
@@ -13,8 +13,8 @@ export class Conta {
         this.validarValor(valor)
 
         if((this._saldo - valor) < 0)
-            throw new NegocioErro("saldo indisponível para operação");
-        
+            throw new NegocioErro("Saldo indisponível para operação");
+
         this._saldo -= valor;
     }
 
