@@ -21,7 +21,9 @@ export class Conta {
     }
 
     public depositar(valor: number):void{
-
+        if (valor == 0){
+            throw new NegocioErro("Valor não pode ser igual ou menor que zero");
+        }
         this._saldo += valor;
     }
 }
