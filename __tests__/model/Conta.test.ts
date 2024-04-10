@@ -24,5 +24,19 @@ describe("Conta", () => {
     expect(()=>{
         conta.depositar(0);
     }).toThrow("Valor não pode ser igual ou menor que zero")
-  })
+  });
+
+  test("sacar com valor negativo",async()=>{
+    const conta: Conta = new Conta("123456",5000.0);
+    expect(()=>{
+        conta.sacar(-5.0)
+    }).toThrow("Valor não pode ser igual ou menor que zero")
+  });
+
+  test("depositar com valor negativo",async()=>{
+    const conta: Conta = new Conta("123456",5000.0);
+    expect(()=>{
+        conta.sacar(-5.0)
+    }).toThrow("Valor não pode ser igual ou menor que zero")
+  });
 });

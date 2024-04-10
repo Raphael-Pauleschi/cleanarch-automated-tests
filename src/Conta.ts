@@ -10,9 +10,7 @@ export class Conta {
     }
 
     public sacar(valor: number): void{
-        if (valor == 0){
-            throw new NegocioErro("Valor não pode ser igual ou menor que zero");
-        }
+        this.validarValor(valor)
         this._saldo -= valor;
     }
 
@@ -21,9 +19,12 @@ export class Conta {
     }
 
     public depositar(valor: number):void{
-        if (valor == 0){
-            throw new NegocioErro("Valor não pode ser igual ou menor que zero");
-        }
+        this.validarValor(valor)
         this._saldo += valor;
+    }
+
+    private validarValor(valor:number): void{
+        if (valor <= 0)
+            throw new NegocioErro("Valor não pode ser igual ou menor que zero");
     }
 }
