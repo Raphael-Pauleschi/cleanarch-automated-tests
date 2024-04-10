@@ -1,4 +1,4 @@
-import { Conta } from "../../src/Conta";
+import { Conta } from "../../src/model/Conta";
 
 describe("Conta", () => {
     test("sacar com sucesso", async () => {

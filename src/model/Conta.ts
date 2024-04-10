@@ -1,4 +1,4 @@
-import { NegocioErro } from "./error/NegocioErro";
+import { NegocioErro } from "../error/NegocioErro";
 import { NumeroConta } from "./NumeroConta";
 export class Conta {
     private _numeroConta: NumeroConta;

@@ -1,4 +1,4 @@
-import { NegocioErro } from "./error/NegocioErro";
+import { NegocioErro } from "../error/NegocioErro";
 
 export class NumeroConta {
   private _numero: string;
