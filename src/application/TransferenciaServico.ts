@@ -1,4 +1,4 @@
-import { Repositorio } from "../model/Repositorio";
+import { Repositorio } from "../model/contract/Repositorio";
 import { Conta } from "../model/Conta";
 import { TransferenciaDTO } from "./dto/TransferenciaDTO";
 import { TransferenciaValor } from "../model/service/TransferenciaValor";
