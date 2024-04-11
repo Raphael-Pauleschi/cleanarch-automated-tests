@@ -18,6 +18,10 @@ export class Conta {
         this._saldo -= valor;
     }
 
+    public get numero(): string{
+        return this._numeroConta.numero;
+    }
+
     public get saldo(): number{
         return this._saldo;
     }
